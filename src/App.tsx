@@ -25,7 +25,6 @@ function App() {
     ? [...filmesFiltrados].sort((a, b) => {
         const posA = a.nome.toLowerCase().indexOf(buscaLower);
         const posB = b.nome.toLowerCase().indexOf(buscaLower);
-        // quem tem a palavra mais "no início" do nome vem primeiro
         if (posA === -1) return 1;
         if (posB === -1) return -1;
         return posA - posB;
