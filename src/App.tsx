@@ -21,16 +21,6 @@ function App() {
     filme.id.toString().includes(buscaLower)
   );
 
-  const filmesExibidos = buscaLower
-    ? [...filmesFiltrados].sort((a, b) => {
-        const posA = a.nome.toLowerCase().indexOf(buscaLower);
-        const posB = b.nome.toLowerCase().indexOf(buscaLower);
-        if (posA === -1) return 1;
-        if (posB === -1) return -1;
-        return posA - posB;
-      })
-    : filmesFiltrados; 
-
   return (
      <div className="App">
       <h1>Filmes</h1>
@@ -52,7 +42,7 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {filmesExibidos.map((filme) => (
+          {filmesFiltrados.map((filme) => (
             <tr key={filme.id}>
               <td>
                 <img src={filme.imagem} alt={filme.nome} width="80" />
