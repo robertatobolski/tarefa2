@@ -29,7 +29,7 @@ function App() {
         type="text"
         placeholder="Buscar por nome, gênero ou ID"
         value={busca}
-        onChange={(e) => setBusca(e.target.value)}
+        onChange={(event) => setBusca(event.target.value)}
       />
 
       <table>
