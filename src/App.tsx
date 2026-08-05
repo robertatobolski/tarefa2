@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import filmes from './filmes.json';
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 type Filmes = {
   id: number;
